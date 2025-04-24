@@ -59,15 +59,7 @@ h1 {
 }
 
 /* ======= MENÚ DE NAVEGACIÓN ======= */
-<<<<<<< HEAD
-=======
-.nav-menu {
-  margin-top: 1em;
-  background: #F0F1F9;
-  width: 100%;
-  transition: background-color 0.3s ease;
-}
->>>>>>> johanMarquez
+
 
 .nav-menu ul {
   display: flex;
@@ -76,7 +68,6 @@ h1 {
   margin: 0;
   padding: 0;
   gap: 8em;
-<<<<<<< HEAD
   position: relative;
   /* flex-wrap: wrap;
       transition: all 0.3s ease-in-out;*/
