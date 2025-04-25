@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tienda Artesanal</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <script src="js/script.js" type="text/javascript" defer></script>
+    
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <div class="logo-titulo">
+        <img src="img/logo1.png" alt="Logo Arte & Alma" class="logo-header" />
+        <h1>Arte & Alma – <span style="color:#4B3E94; font-family: Arial, sans-serif"> Tu Tienda de Artesanías Únicas</span></h1>
+      </div>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <div id="cart-icon" onclick="toggleCart()">🛒 <span id="cart-count">0</span></div>
+    </div>
+    <hr>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li>
+          <a href="productos.html">Productos</a>
+          <ul>
+            <li><a href="productos.html" onclick="mostrarPorCategoria('sombreros')">Sombreros</a></li>
+            <li><a href="#" onclick="mostrarPorCategoria('hamacas')">Hamacas</a></li>
+            <li><a href="#" onclick="mostrarPorCategoria('floreros')">Floreros</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+    <hr>
+  </header>
+
+ <!-- Aqui empieza slider -->
+ <div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 4</div>
+    <img src="img/imgslider1.jpg" style="width:100%">
+    <div class="text">Bosque Tropical</div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 4</div>
+    <img src="img/imgslider2.jpg" style="width:100%">
+    <div class="text">Nevado</div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 4</div>
+    <img src="img/imgslider3.jpg" style="width:100%">
+    <div class="text">Montaña</div>
+  </div>
+
+  <div class="mySlides fade">
+      <div class="numbertext">4 / 4</div>
+      <img src="img/imgslider4.png" style="width:100%">
+      <div class="text">Montaña</div>
+    </div>
+  
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span>
+    <span class="dot"></span> 
+  </div>
+  <!-- Fin del slider-->
+  
+  
+  </body>
+</html>
