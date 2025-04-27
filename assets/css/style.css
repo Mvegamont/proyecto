@@ -191,55 +191,6 @@ button:hover {
   display: none;
 }
 
-@media (max-width: 768px) {
-  .nav-menu ul {
-    flex-direction: column;
-    display: none;
-    text-align: center;
-  }
-
-  .nav-menu ul.show {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-    margin-left: auto;
-  }
-
-  .header-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-
-     .flex-wrap: wrap {
-    transition: all 0.3s ease-in-out;
-  } 
-
-  .nav-menu ul li a {
-    color: lightslategray;
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 0.25em 0;
-    border-bottom: 2px solid transparent;
-    transition: all 0.3s ease;
-  }
-
-  .nav-menu ul li a:hover {
-    border-bottom: 2px solid black;
-    color: lightgreen;
-  }
-
-  .menu-toggle {
-    display: none;
-    font-size: 1.5em;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-  }
 
   @media (max-width: 768px) {
     .nav-menu ul {
@@ -316,7 +267,7 @@ button:hover {
     animation-name: fade;
     animation-duration: 1.5s;
   }
-}
+
 
 /*contacto*/
 
