@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tienda Artesanal</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
-  <script src="js/script.js" type="text/javascript" defer></script>
-    
+  <!--<script src="js/script.js" type="text/javascript" defer></script> -->
 </head>
 <body>
   <!-- Header -->
@@ -17,70 +14,46 @@
     <div class="header-container">
       <div class="logo-titulo">
         <img src="img/logo1.png" alt="Logo Arte & Alma" class="logo-header" />
-          <h1>Arte & Alma – <span style="color:#4B3E94; font-family: Arial, sans-serif"> Tu Tienda de Artesanías Únicas</span></h1>
+        <h1>Arte & Alma – <span style="color:#4B3E94; font-family: Arial, sans-serif"> Tu Tienda de Artesanías Únicas</span></h1>
       </div>
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
       <div id="cart-icon" onclick="toggleCart()">🛒 <span id="cart-count">0</span></div>
     </div>
     <hr>
     <nav class="nav-menu">
-      <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Nosotros</a></li>
+      <ul id="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
         <li>
           <a href="#">Productos</a>
           <ul>
-            <li><a href="productos.html" onclick="mostrarPorCategoria('sombreros')">Sombreros</a></li>
-            <li><a href="productos.html" onclick="mostrarPorCategoria('hamacas')">Hamacas</a></li>
-            <li><a href="productos.html" onclick="mostrarPorCategoria('floreros')">Floreros</a></li>
+            <li><a href="#" onclick="mostrarPorCategoria('sombreros')">Sombreros</a></li>
+            <li><a href="#" onclick="mostrarPorCategoria('hamacas')">Hamacas</a></li>
+            <li><a href="#" onclick="mostrarPorCategoria('floreros')">Floreros</a></li>
           </ul>
         </li>
-        <li><a href="#">Blog</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
     <hr>
   </header>
+ 
+  <main>
+    
+    <section class="productos" id="product-list">
+      <script src="js/product.js"></script>
+      <script src="js/funciones.js"></script>
+    </section>
+    
 
-
-  <!-- Aqui empieza slider -->
- <div class="slideshow-container">
-
-  <div class="mySlides fade">
-    <div class="numbertext">1 / 4</div>
-    <img src="img/imgslider1.jpg" style="width:100%">
-    <div class="text">Sombreros Artesanales</div>
-  </div>
-  
-  <div class="mySlides fade">
-    <div class="numbertext">2 / 4</div>
-    <img src="img/imgslider2.jpg" style="width:100%">
-    <div class="text">Hamacas en Hilo</div>
-  </div>
-  
-  <div class="mySlides fade">
-    <div class="numbertext">3 / 4</div>
-    <img src="img/imgslider3.jpg" style="width:100%">
-    <div class="text">Floreros Artesano</div>
-  </div>
-
-  <div class="mySlides fade">
-      <div class="numbertext">4 / 4</div>
-      <img src="img/imgslider4.png" style="width:100%">
-      <div class="text">Wasap de Contacto</div>
-    </div>
-  
-  </div>
-  <br>
-  
-  <div style="text-align:center">
-    <span class="dot"></span> 
-    <span class="dot"></span> 
-    <span class="dot"></span>
-    <span class="dot"></span> 
-  </div>
-  <!-- Fin del slider-->
-
+    <section id="cart" class="hidden">
+      <h2>Carrito</h2>
+      <ul id="cart-items"></ul>
+      <p>Total: $<span id="cart-total">0</span></p>
+      <button onclick="checkout()">Finalizar Compra</button>
+    </section>
+  </main>
   <!--Inicio Footer -->
 
   <footer>
@@ -165,13 +138,6 @@
 
   <!-- Fin Footer -->
 
-</body>
-
-</html>
-
- 
-  
   
   </body>
 </html>
-
