@@ -499,3 +499,16 @@ footer {
 
 
 /*--------------------------------FINAL FOOTER----------------------------------*/
+
+
+
+/* Informacion de la conpañia */
+
+.contenidoInfo {
+  margin: 50px;
+  text-align: justify;
+}
+
+.contenidoInfo h2 {
+  text-align: center;
+}
