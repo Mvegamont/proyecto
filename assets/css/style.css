@@ -450,6 +450,21 @@ footer {
 
 
 /*--------------------------------FINAL FOOTER----------------------------------*/
+
+
+
+
+/* Informacion de la conpañia */
+
+.contenidoInfo {
+  margin: 50px;
+  text-align: justify;
+}
+
+.contenidoInfo h2 {
+  text-align: center;
+}
+
 /*-------------------- Desde aqui empieza el diseño del Blog--------------------------*/
 :root {
   --primary: lightgreen;
@@ -557,3 +572,4 @@ footer {
 }
 
 /*-------------------------------- Fin del diseño del blog --------------------------*/
+

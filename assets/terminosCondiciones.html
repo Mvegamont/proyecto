@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,12 +11,26 @@
         integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda Artesanal</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="js/script.js" type="text/javascript" defer></script>
+
+</head>
+
 <body>
     <!-- Header -->
     <header>
         <div class="header-container">
             <div class="logo-titulo">
                 <img src="img/logo1.png" alt="Logo Arte & Alma" class="logo-header" />
+
                 <h1>Arte & Alma – <span style="color:#4B3E94; font-family: Arial, sans-serif"> Tu Tienda de Artesanías
                         Únicas</span></h1>
             </div>
@@ -25,7 +40,7 @@
         <hr>
         <nav class="nav-menu">
             <ul>
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Inicio</a></li>
                 <li><a href="#">Nosotros</a></li>
                 <li>
                     <a href="productos.html">Productos</a>
@@ -36,48 +51,54 @@
                     </ul>
                 </li>
                 <li><a href="#">Blog</a></li>
-                <li><a href="#">Contacto</a></li>
+
+                <li><a href="contacto.html">Contacto</a></li>
+
             </ul>
         </nav>
         <hr>
     </header>
 
-    <!--Inicio Formulario -->
-    <main class="contenido-principal">
-        <h2 class="text-center">Contacto</h2>
-        <form action="" class="formulario">
-            <fieldset>
-                <legend>Tus datos</legend>
-                <div class="campo">
-                    <label for="nombre">Nombre:</label>
-                    <input id="nombre" type="text" placeholder="Inregse su nombre" required>
-                </div>
-                <div class="campo">
-                    <label for="asunto">Asunto:</label>
-                    <input id="asunto" type="text" placeholder="Inregse el asunto">
-                </div>
-                <div class="campo">
-                    <label for="email">Email:</label>
-                    <input id="email" type="email" placeholder="Inregse su email">
-                </div>
-                <div class="campo">
-                    <label for="tel">Telefono:</label>
-                    <input id="tel" type="tel" placeholder="Inregse su telefono">
-                </div>
-                <div class="campo">
-                    <label for="fecha">Fecha:</label>
-                    <input id="fecha" type="date">
-                </div>
-                <div class="campo">
-                    <label for="texto">Mensaje:</label>
-                    <textarea name="" id=""></textarea>
-                </div>
-            </fieldset>
-            <button class="btn" type="submit" value="button">Enviar formulario</button>
-        </form>
-    </main>
 
-    <!-- Fin Formulario-->
+    <!-- Aqui empieza slider -->
+    <main>
+        <div class="contenidoInfo">
+            <h2>Términos y Condiciones</h2>
+            <p>
+                <br>
+                <strong>Última actualización: [Fecha]</strong>
+                <br>
+                Bienvenido a Arte y Alma. Al acceder o utilizar nuestros servicios, aceptas los siguientes Términos y
+                Condiciones. Por favor, léelos detenidamente.
+                <br>
+                <br>
+                <strong>1. Generalidades</strong>
+                <br>
+                <br>
+                Estos términos aplican a todas las compras realizadas en nuestra tienda física, sitio web o canales
+                digitales. Nos reservamos el derecho de modificar estas condiciones en cualquier momento, notificando
+                los cambios oportunamente.
+                <br>
+                <br>
+                <strong>2. Productos artesanales</strong>
+            <ul>
+                <li>Todos nuestros productos son hechos a mano, por lo que pueden presentar variaciones en colores,
+                    tamaños o acabados.</li>
+                <li>Las fotografías son referenciales; cada pieza es única.</li>
+                <li>Nos esforzamos por describir con precisión cada artículo, pero no garantizamos exactitud total en
+                    los colores mostrados por las pantallas.</li>
+            </ul>
+            <strong>3. Precios y pagos</strong>
+            <ul>
+                <li>Los precios están expresados en [moneda local] e incluyen impuestos aplicables.</li>
+                <li>Aceptamos pagos por [especificar medios: transferencia, tarjetas, efectivo, plataformas en línea,
+                    etc.].</li>
+                <li>Nos reservamos el derecho de cambiar precios sin previo aviso.</li>
+            </ul>
+            </p>
+        </div>
+    </main>
+    <!-- Fin del slider-->
 
     <!--Inicio Footer -->
 
@@ -155,7 +176,6 @@
     </footer>
 
     <!-- Fin Footer -->
-
 </body>
 
 </html>
