@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog – Arte & Alma</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <div class="logo-titulo">
+        <img src="img/logo1.png" alt="Logo Arte & Alma" class="logo-header" />
+        <h1>Arte & Alma – <span style="color:#4B3E94; font-family: Arial, sans-serif"> Tu Tienda de Artesanías Únicas</span></h1>
+      </div>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <div id="cart-icon" onclick="toggleCart()">🛒 <span id="cart-count">0</span></div>
+    </div>
+    <hr>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="index1.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li>
+          <a href="">Productos</a>
+          <ul>
+            <li><a href="productos.html" onclick="mostrarPorCategoria('sombreros')">Sombreros</a></li>
+            <li><a href="#" onclick="mostrarPorCategoria('hamacas')">Hamacas</a></li>
+            <li><a href="#" onclick="mostrarPorCategoria('floreros')">Floreros</a></li>
+          </ul>
+        </li>
+        <li><a href="index1.html">Blog</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+    <hr>
+  </header>
+ 
+
+  <main class="blog-container">
+    <h2 class="branding-title">Últimas publicaciones</h2>
+
+    <!-- Barra de búsqueda de categorías -->
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar...">
+      <select>
+        <option value="">Todas las categorías</option>
+        <option value="ideas">Ideas</option>
+        <option value="historia">Historia</option>
+        <option value="colores">Colores y formas</option>
+      </select>
+    </div>
+
+    <!-- Entrada destacada -->
+    <section class="featured">
+      <img src="img/imgsliderprueba.png" alt="Imagen destacada del blog">
+      <div class="featured-content">
+        <p class="date">Publicado el 4 de abril de 2025</p>
+        <h2>La historia detrás de nuestras piezas</h2>
+        <p>Descubre cómo cada artesanía en Arte & Alma es creada con pasión, inspiración y tradición. En esta entrada te contamos todo sobre nuestros procesos creativos...</p>
+        <button onclick="mostrarEntradas()" class="boton">Leer más</button>
+      </div>
+    </section>
+
+    <!-- Entradas completas -->
+    <section id="entradas-completas" class="hidden">
+      <article class="post">
+        <div class="post-content">
+          <h3>La historia detrás de nuestras piezas</h3>
+          <p class="date">Publicado el 4 de abril de 2025</p>
+          <p>En Arte & Alma, cada pieza cuenta una historia. Desde la selección de materiales hasta el toque final del artista, te llevamos al corazón del proceso artesanal que convierte una idea en arte tangible...</p>
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-content">
+          <h3>3 ideas para regalar artesanías</h3>
+          <p class="date">Publicado el 28 de marzo de 2025</p>
+          <p>Si estás buscando un regalo especial, las artesanías personalizadas son una excelente opción. Te damos ideas para sorprender con algo hecho a mano y con mucho corazón...</p>
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-content">
+          <h3>Colores y formas que inspiran</h3>
+          <p class="date">Publicado el 21 de marzo de 2025</p>
+          <p>La naturaleza, la cultura y los sentimientos guían nuestros diseños. Conoce cómo elegimos los colores, texturas y formas en cada colección...</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container-footer-all">
+   <div class="contiene-cuerpo">
+       <div class="columna1">
+        <h1>Mas información de la Compañia</h1>
+        <p>M/V es una pagina web  que se dedica a satisfacer las necesidades del cambiante y competitivo
+         mercado de personas apasionadas por los videos juegos, aportando noticias, analisis, trucos y guias 
+         basado en la experiencia propia y de nuestros usuarios.</p>
+      </div>
+     
+        <div class="columna2"> 
+          <h1>Redes Sociales</h1>
+        
+            <div class="row1">
+              <img src="../detalles_con_Amor/Imagenes/facebook.jpg">
+              <p>Siguenos en Facebook</p>
+            </div>
+          
+            <div class="row1">
+              <img src="../detalles_con_Amor/Imagenes/twitter.jpg">
+              <p>Siguenos en Twiterr</p>
+            </div>
+          
+            <div class="row1">
+              <img src="../detalles_con_Amor/Imagenes/instagram.jpg">
+              <p>Siguenos en Instagram</p>
+            </div>
+          
+            <div class="row1">
+              <img src="../detalles_con_Amor/Imagenes/google.jpg">
+              <p>Siguenos en Google Plus</p>
+            </div>
+          
+            <div class="row1">
+              <img src="../detalles_con_Amor/Imagenes/pinteres.png">
+              <p>Siguenos en Pinteres</p>
+            </div>
+         </div>
+      
+            <div class="columna3">
+              <h1>Información Contactos</h1>
+                 <div class="row2">
+                   <img src="../detalles_con_Amor/Imagenes/house.jpg">
+                   <p>UniAutonoma del Caribe<br>
+                     Barranquilla - Atlantico<br>
+                     Manuel J. Vega<br>
+                     Dir: Cl 90 #46-112.
+                  
+                </div>
+         
+               <div class="row2">
+                  <img src="../detalles_con_Amor/Imagenes/celular.png">
+                  <p>+57-301 417 18 86</p>
+               </div>
+         
+               <div class="row2">
+                  <img src="../detalles_con_Amor/Imagenes/contacto.png">
+                  <p>mvegamontesinos@gmail.com</p>
+               </div>
+            </div>
+                   
+   </div>
+    
+          
+    </div> 
+    
+      <div class="contiene-footer">
+        <div class="footer2">
+          <div class="copyright">
+           &#169 2018 Todos los Deerechos Reservados &#124
+          </div>
+    
+          <div class="information">
+          <a href=""> Información Compañia</a> &#124 <a href="">Privacidad y Politica</a> &#124 <a href="">Terminos y Condiciones</a>
+         </div>
+        </div>
+        </div>
+</footer>
+
+  <script>
+    function mostrarEntradas() {
+      document.querySelector('.featured').style.display = 'none';
+      document.getElementById('entradas-completas').classList.remove('hidden');
+    }
+  </script>
+
+</body>
+</html>
