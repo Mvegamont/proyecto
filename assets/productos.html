@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tienda Artesanal</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--<script src="js/script.js" type="text/javascript" defer></script> -->
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <div class="logo-titulo">
+        <img src="img/logo1.png" alt="Logo Arte & Alma" class="logo-header" />
+        <h1>Arte & Alma – <span style="color:#4B3E94; font-family: Arial, sans-serif"> Tu Tienda de Artesanías Únicas</span></h1>
+      </div>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <div id="cart-icon" onclick="toggleCart()">🛒 <span id="cart-count">0</span></div>
+    </div>
+    <hr>
+    <nav class="nav-menu">
+      <ul id="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li>
+          <a href="#">Productos</a>
+          <ul>
+            <li><a href="#" onclick="mostrarPorCategoria('sombreros')">Sombreros</a></li>
+            <li><a href="#" onclick="mostrarPorCategoria('hamacas')">Hamacas</a></li>
+            <li><a href="#" onclick="mostrarPorCategoria('floreros')">Floreros</a></li>
+          </ul>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <hr>
+  </header>
+ 
+  <main>
+    
+    <section class="productos" id="product-list">
+      <script src="js/product.js"></script>
+      <script src="js/funciones.js"></script>
+    </section>
+    
+
+    <section id="cart" class="hidden">
+      <h2>Carrito</h2>
+      <ul id="cart-items"></ul>
+      <p>Total: $<span id="cart-total">0</span></p>
+      <button onclick="checkout()">Finalizar Compra</button>
+    </section>
+  </main>
+  <!--Inicio Footer -->
+
+ <!--Inicio Footer -->
+
+ <footer>
+  <div class="container-footer-all">
+    <div class="contiene-cuerpo">
+      <div class="columna1">
+        <h1>Mas información de la Compañia</h1>
+        <p><strong>Arte y Alma</strong> es una tienda dedicada a ofrecer piezas artesanales únicas que combinan tradición, creatividad
+          y emoción. Cada artículo refleja el talento y el alma de los artesanos, buscando conectar con quienes
+          valoran la autenticidad y el arte hecho a mano.</p>
+      </div>
+
+      <div class="columna2">
+        <h1>Redes Sociales</h1>
+
+        <div class="row1">
+          <img src="/assets/img/faviconFacebook.png">
+          <p>Siguenos en Facebook</p>
+        </div>
+
+        <div class="row1">
+          <img src="/assets/img/faviconInstagram.png">
+          <p>Siguenos en Instagram</p>
+        </div>
+
+        <div class="row1">
+          <img src="/assets/img/faviconWhatsapp.png">
+          <p>Siguenos en WhatsApp</p>
+        </div>
+      </div>
+
+      <div class="columna3">
+        <h1>Información Contactos</h1>
+        <div class="row2">
+          <img src="/assets/img/logo1.png">
+          <p> <strong>Arte & Alma – Tu Tienda de Artesanías Únicas</strong><br>
+            Barranquilla - Atlantico<br>
+            Colombia Dir: Cl 90 #46-112.
+
+        </div>
+
+        <div class="row2">
+          <img src="/assets/img/faviconTelefono.png">
+          <p>+57-301 417 18 86</p>
+        </div>
+
+        <div class="row2">
+          <img src="/assets/img/FaviconCorreo-electronico.png">
+          <p>info@alma&arte.com.co</p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <div class="contiene-footer">
+    <div class="footer2">
+      <div class="copyright">
+        &#169 2025 Todos los Derechos Reservados &#124
+      </div>
+
+      <div class="information">
+        <a href="informacionCompañia.html"> Información Compañia</a> &#124 <a
+          href="privacidadPoliticas.html">Privacidad y Politica</a> &#124 <a href="terminosCondiciones.html">Terminos y
+          Condiciones</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Fin Footer -->
+
+  
+  </body>
+</html>
