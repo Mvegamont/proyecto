@@ -268,6 +268,50 @@ button:hover {
     animation-duration: 1.5s;
   }
 
+  /*-------------------- Desde aqui empieza el diseño de opción nosotros--------------------------*/
+.nosotros-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.nosotros-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 1200px;
+  gap: 40px;
+  background-color: rgb(26, 26, 228);
+}
+
+.img-nosotros {
+  width: 400px;
+  max-width: 100%;
+  border-radius: 0px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  
+}
+
+.texto-nosotros {
+  max-width: 600px;
+}
+
+.texto-nosotros h2 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.texto-nosotros p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: white;
+}
+
+
+  /*-------------------- Fin de la pagina nosotros--------------------------*/
 
 /*contacto*/
 
