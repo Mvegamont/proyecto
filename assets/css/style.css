@@ -160,7 +160,7 @@ h1 {
 .producto {
   border: 1px solid #ccc;
   border-radius: 8px;
-  width: 200px;
+  width: 225px;
   text-align: center;
   padding: 1em;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -313,69 +313,70 @@ button:hover {
 
   /*-------------------- Fin de la pagina nosotros--------------------------*/
 
-/*contacto*/
-
-.contenido-principal {
-  padding: 80px;
+/*-------------------Desde aqui empieza el diseño de contacto*/
+/* Hero Section */
+section.bg-light.text-center {
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
-.text-center {
-  text-align: center;
+/* Tarjetas de contacto */
+.shadow-sm {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.shadow-sm:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-.formulario {
-  max-width: 600px;
-  margin: 0 auto;
+/* Íconos */
+i.fa-2x {
+  color: #0d6efd;
 }
 
-.formulario fieldset {
-  border: 1px solid black;
-  margin-bottom: 40px;
+/* Botón de formulario */
+.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  font-weight: 500;
+}
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
 }
 
-.formulario legend {
-  background-color: #037bc0;
-  width: 90%;
-  text-align: center;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 600;
-  padding: 10px;
-  margin-bottom: 40px;
+/* Formulario */
+form input, form textarea {
+  border-radius: 0.5rem;
 }
 
-.campo {
-  display: flex;
-  margin-bottom: 20px;
+/* Accordion (FAQ) */
+.accordion-button {
+  font-weight: 500;
+  background-color: #f8f9fa;
+}
+.accordion-button:not(.collapsed) {
+  color: #0d6efd;
+  background-color: #e7f1ff;
+}
+.accordion-body {
+  color: #555;
 }
 
-.campo label {
-  flex-basis: 100px;
+/* Mapa simulado */
+#map {
+  background-image: url('');
+  background-size: cover;
+  background-position: center;
+  border-radius: 0.75rem;
 }
 
-.campo input:not([type="radio"]),
-.campo textarea,
-.campo select {
-  flex: 1;
-  border: 1px solid #e1e1e1;
-  padding: 10px;
+/* Espaciado en general */
+section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
-
-.btn {
-  background-color: #8cbc00;
-  display: block;
-  color: #ffff;
-  text-transform: uppercase;
-  /*MAYUSCULAS*/
-  font-weight: 900;
-  padding: 1rem;
-  transition: background-color .3s ease-out;
-  text-align: center;
-  border: none;
-  width: 100%;
-}
-
+/*---------------------Fin de diseño de contacto-------------*/
 
 /* Inicio footer */
 

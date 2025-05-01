@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tienda Artesanal</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <div class="logo-titulo">
+        <img src="img/logo1.png" alt="Logo Arte & Alma" class="logo-header" />
+        <h1>Arte & Alma – <span style="color:#4B3E94;">Tu Tienda de Artesanías Únicas</span></h1>
+      </div>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <div id="cart-icon" onclick="toggleCart()">🛒 <span id="cart-count">0</span></div>
+    </div>
+    <hr>
+    <nav class="nav-menu">
+      <ul id="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#">Productos</a>
+          <ul>
+            <li><a href="productos.html" onclick="mostrarPorCategoria('sombreros')">Sombreros</a></li>
+            <li><a href="#" onclick="mostrarPorCategoria('hamacas')">Hamacas</a></li>
+            <li><a href="#" onclick="mostrarPorCategoria('floreros')">Floreros</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <hr>
+  </header>
+
+  <!-- Carrito de Compras -->
+  <div class="container mt-5">
+    <h2 class="mb-4">Carrito de Compras</h2>
+    <div class="row">
+      <!-- Lista del carrito -->
+      <div class="col-md-8">
+        <ul id="carrito" class="list-group mb-3"></ul>
+        <div class="d-flex justify-content-between align-items-center">
+          <strong>Total: $<span id="total-carrito">0</span></strong>
+          <button id="vaciar-carrito" class="btn btn-danger btn-sm">Vaciar Carrito</button>
+        </div>
+      </div>
+
+      <!-- Formulario de envío -->
+      <div class="col-md-4">
+        <h5>Información de Envío</h5>
+        <form id="form-envio">
+          <div class="mb-3">
+            <label for="pais" class="form-label">País</label>
+            <select class="form-select" id="pais" required>
+              <option value="" disabled selected>Selecciona un país</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="ciudad" class="form-label">Ciudad</label>
+            <input type="text" id="ciudad" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="direccion" class="form-label">Dirección</label>
+            <input type="text" id="direccion" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="transporte" class="form-label">Agencia de Transporte</label>
+            <select id="transporte" class="form-select" required>
+              <option value="" disabled selected>Selecciona una opción</option>
+              <option value="7">Servientrega ($25.000)</option>
+              <option value="5">Coordinadora ($30.000)</option>
+              <option value="4">Interrapidísimo ($40.000)</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Total con Envío:</label>
+            <div><strong>$<span id="total-con-envio">0</span></strong></div>
+          </div>
+
+          <!-- Método de Pago -->
+          <div class="mb-3">
+            <label class="form-label">Método de Pago</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="metodoPago" id="pagoEfectivo" value="efectivo" required>
+              <label class="form-check-label" for="pagoEfectivo">Pago contra entrega</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="metodoPago" id="pagoNequi" value="nequi" required>
+              <label class="form-check-label" for="pagoNequi">Nequi</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="metodoPago" id="pagoDaviplata" value="daviplata" required>
+              <label class="form-check-label" for="pagoDaviplata">Daviplata</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="metodoPago" id="pagoPSE" value="pse" required>
+              <label class="form-check-label" for="pagoPSE">PSE</label>
+            </div>
+
+            <!-- Selector de banco (solo si elige PSE) -->
+            <div class="mt-3" id="pse-bancos" style="display: none;">
+              <label for="bancoPSE" class="form-label">Selecciona tu banco</label>
+              <select id="bancoPSE" class="form-select">
+                <option value="">-- Selecciona un banco --</option>
+                <option value="bancolombia">Bancolombia</option>
+                <option value="davivienda">Davivienda</option>
+                <option value="bbva">BBVA</option>
+                <option value="bancoBogota">Banco de Bogotá</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">Realizar Pago</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/Carrito.js"></script>
+  <script src="js/Paises.js"></script>
+  <!-- <script src="js/Pago.js"></script> -->
+
+  <!--Inicio Footer -->
+
+  <footer>
+    <div class="container-footer-all">
+      <div class="contiene-cuerpo">
+        <div class="columna1">
+          <h1>Mas información de la Compañia</h1>
+          <p><strong>Arte y Alma</strong> es una tienda dedicada a ofrecer piezas artesanales únicas que combinan tradición, creatividad
+            y emoción. Cada artículo refleja el talento y el alma de los artesanos, buscando conectar con quienes
+            valoran la autenticidad y el arte hecho a mano.</p>
+        </div>
+
+        <div class="columna2">
+          <h1>Redes Sociales</h1>
+
+          <div class="row1">
+            <img src="/assets/img/faviconFacebook.png">
+            <p>Siguenos en Facebook</p>
+          </div>
+
+          <div class="row1">
+            <img src="/assets/img/faviconInstagram.png">
+            <p>Siguenos en Instagram</p>
+          </div>
+
+          <div class="row1">
+            <img src="/assets/img/faviconWhatsapp.png">
+            <p>Siguenos en WhatsApp</p>
+          </div>
+        </div>
+
+        <div class="columna3">
+          <h1>Información Contactos</h1>
+          <div class="row2">
+            <img src="/assets/img/logo1.png">
+            <p> <strong>Arte & Alma – Tu Tienda de Artesanías Únicas</strong><br>
+              Barranquilla - Atlantico<br>
+              Colombia Dir: Cl 90 #46-112.
+
+          </div>
+
+          <div class="row2">
+            <img src="/assets/img/faviconTelefono.png">
+            <p>+57-301 417 18 86</p>
+          </div>
+
+          <div class="row2">
+            <img src="/assets/img/FaviconCorreo-electronico.png">
+            <p>info@alma&arte.com.co</p>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+    <div class="contiene-footer">
+      <div class="footer2">
+        <div class="copyright">
+          &#169 2025 Todos los Derechos Reservados &#124
+        </div>
+
+        <div class="information">
+          <a href="informacionCompañia.html"> Información Compañia</a> &#124 <a
+            href="privacidadPoliticas.html">Privacidad y Politica</a> &#124 <a href="terminosCondiciones.html">Terminos y
+            Condiciones</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Fin Footer -->
+  <script>
+    // Recuperamos el carrito almacenado en LocalStorage
+    document.addEventListener('DOMContentLoaded', function() {
+        const carritoGuardado = JSON.parse(localStorage.getItem('carrito'));
+        const carritoList = document.getElementById('carrito');
+        const totalCarrito = document.getElementById('total-carrito');
+        
+        if (carritoGuardado && carritoGuardado.length > 0) {
+            let total = 0;
+            carritoGuardado.forEach(producto => {
+                const li = document.createElement('li');
+                li.classList.add('list-group-item');
+                li.innerHTML = `${p.nombre} - x${p.cantidad} - $${p.precio * p.cantidad}`;
+                carritoList.appendChild(li);
+                total += p.precio * p.cantidad;
+            });
+            totalCarrito.textContent = total;
+        } else {
+            carritoList.innerHTML = '<li class="list-group-item">Tu carrito está vacío</li>';
+        }
+    });
+
+    // Simular el pago
+    document.getElementById("form-envio").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const pais = document.getElementById("pais").value;
+    const ciudad = document.getElementById("ciudad").value;
+    const direccion = document.getElementById("direccion").value;
+    const transporte = document.getElementById("transporte");
+    const envio = parseFloat(transporte.value);
+    const metodoPago = document.querySelector('input[name="metodoPago"]:checked');
+    const banco = document.getElementById("bancoPSE")?.value || "";
+
+    if (!pais || !ciudad || !direccion || !transporte.value || !metodoPago) {
+      alert("Por favor completa todos los campos.");
+      return;
+    }
+
+    if (metodoPago.value === "pse" && !banco) {
+      alert("Selecciona un banco para pagar con PSE.");
+      return;
+    }
+
+    alert("¡Pago realizado con éxito!\nGracias por tu compra.");
+    localStorage.removeItem("carrito");
+    location.reload();
+  });
+
+  // Codigo para mostrar selector de bancos si solo se elige PSE
+
+    // Vaciar carrito
+    document.getElementById('vaciar-carrito').addEventListener('click', function() {
+        localStorage.removeItem('carrito'); // Eliminar el carrito del LocalStorage
+        window.location.reload(); // Recargar la página para actualizar la vista
+    });
+  </script>
+  <script src="js/Pago.js"></script>
+</body>
+
+</html>

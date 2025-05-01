@@ -5,9 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tienda Artesanal</title>
-    <link rel="stylesheet" href="/assets/css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+   <script src="js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
@@ -38,44 +38,135 @@
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
+           
         </nav>
         <hr>
     </header>
 
-    <!--Inicio Formulario -->
-    <main class="contenido-principal">
-        <h2 class="text-center">Contacto</h2>
-        <form action="" class="formulario">
-            <fieldset>
-                <legend>Tus datos</legend>
-                <div class="campo">
-                    <label for="nombre">Nombre:</label>
-                    <input id="nombre" type="text" placeholder="Inregse su nombre" required>
-                </div>
-                <div class="campo">
-                    <label for="asunto">Asunto:</label>
-                    <input id="asunto" type="text" placeholder="Inregse el asunto">
-                </div>
-                <div class="campo">
-                    <label for="email">Email:</label>
-                    <input id="email" type="email" placeholder="Inregse su email">
-                </div>
-                <div class="campo">
-                    <label for="tel">Telefono:</label>
-                    <input id="tel" type="tel" placeholder="Inregse su telefono">
-                </div>
-                <div class="campo">
-                    <label for="fecha">Fecha:</label>
-                    <input id="fecha" type="date">
-                </div>
-                <div class="campo">
-                    <label for="texto">Mensaje:</label>
-                    <textarea name="" id=""></textarea>
-                </div>
-            </fieldset>
-            <button class="btn" type="submit" value="button">Enviar formulario</button>
-        </form>
-    </main>
+  <!-- Hero Section -->
+<section class="py-5 bg-light text-center">
+  <div class="container">
+      <h1 class="display-4 text-primary fw-bold">Contáctanos</h1>
+      <p class="lead text-muted">Estamos aquí para ayudarte con lo que necesites.</p>
+  </div>
+</section>
+
+<!-- Información de contacto -->
+<section class="py-5">
+  <div class="container">
+      <div class="row text-center g-4">
+          <div class="col-md-4">
+              <div class="p-4 shadow-sm border rounded h-100">
+                  <i class="fas fa-map-marker-alt fa-2x text-primary mb-3"></i>
+                  <h5>Dirección</h5>
+                  <p class="text-muted mb-1">Calle Falsa 123</p>
+                  <p class="text-muted">Ciudad, País</p>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="p-4 shadow-sm border rounded h-100">
+                  <i class="fas fa-phone fa-2x text-primary mb-3"></i>
+                  <h5>Teléfono</h5>
+                  <p class="text-muted mb-1">+1 234 567 890</p>
+                  <p class="text-muted">Lunes a Viernes: 9am - 6pm</p>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="p-4 shadow-sm border rounded h-100">
+                  <i class="fas fa-envelope fa-2x text-primary mb-3"></i>
+                  <h5>Email</h5>
+                  <p class="text-muted mb-1">info@tiendaonline.com</p>
+                  <p class="text-muted">soporte@tiendaonline.com</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Mapa y formulario -->
+<section class="py-5 bg-light">
+  <div class="container">
+      <div class="row g-4">
+          <div class="col-lg-6">
+              <h3 class="mb-4 text-primary">Encuéntranos</h3>
+              <!--<div id="map" class="rounded shadow-sm" style="height: 300px; background: #e0e0e0;"></div>-->
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.711709719223!2d-74.82077972622211!3d10.985119255312187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d1a29e54f51%3A0xbe6622ac8c924d50!2sParque%20y%20Cancha%20Las%20Mercedes!5e0!3m2!1ses-419!2sco!4v1746067304341!5m2!1ses-419!2sco" 
+              width="500" 
+              height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+
+              </iframe>
+          </div>
+          <div class="col-lg-6">
+              <h3 class="mb-4 text-primary">Envíanos un mensaje</h3>
+              <form>
+                  <div class="mb-3">
+                      <label for="name" class="form-label">Nombre</label>
+                      <input type="text" class="form-control" id="name" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="email" class="form-label">Correo electrónico</label>
+                      <input type="email" class="form-control" id="email" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="subject" class="form-label">Asunto</label>
+                      <input type="text" class="form-control" id="subject" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="message" class="form-label">Mensaje</label>
+                      <textarea class="form-control" id="message" rows="4" required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100">Enviar mensaje</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Preguntas Frecuentes -->
+<section class="py-5">
+  <div class="container">
+      <h2 class="text-center text-primary mb-4">Preguntas Frecuentes</h2>
+      <div class="accordion" id="faqAccordion">
+          <div class="accordion-item">
+              <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                      ¿Cuáles son los métodos de pago aceptados?
+                  </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                      Aceptamos tarjetas, PayPal y transferencias bancarias.
+                  </div>
+              </div>
+          </div>
+          <div class="accordion-item">
+              <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                      ¿Cuánto tarda el envío?
+                  </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                      De 1 a 7 días hábiles según tu ubicación.
+                  </div>
+              </div>
+          </div>
+          <div class="accordion-item">
+              <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                      ¿Cuál es la política de devoluciones?
+                  </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                      Tienes hasta 30 días para devolver un producto en su estado original.
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
 
     <!-- Fin Formulario-->
 
